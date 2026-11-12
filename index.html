@@ -3,16 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gerador de QR Code — UNESPAR</title>
+  <title>Gerador de QR Code — CRE Mafra / SED-SC</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <!-- ═══════════════ HEADER ═══════════════ -->
   <header>
-    <div class="header-brand">
-      <img src="assets/logo-unespar.png" alt="UNESPAR" />
-      <span>QR Code Generator</span>
+    <div class="header-top">
+      Secretaria de Estado da Educação
+    </div>
+    <div class="header-main">
+      <div class="header-brand">
+        <img src="assets/logo-cre-mafra.png" alt="CRE Mafra" class="logo-cre" />
+        <div class="brand-text">
+          <span class="brand-title">CRE Mafra</span>
+          <span class="brand-sub">Coordenadoria Regional de Educação</span>
+        </div>
+      </div>
+      <span class="header-tool-name">QR Code Generator</span>
     </div>
     <p class="header-sub">Gerador gratuito • QR Codes permanentes • Sem expiração</p>
   </header>
@@ -60,7 +69,7 @@
         <!-- URL -->
         <div class="content-form active" id="form-url">
           <label>URL</label>
-          <input type="url" id="input-url" placeholder="https://unespar.edu.br/" />
+          <input type="url" id="input-url" placeholder="https://www.sed.sc.gov.br/" />
         </div>
 
         <!-- TEXT -->
@@ -124,15 +133,15 @@
           <label>Nome</label>
           <input type="text" id="vc-name" placeholder="João da Silva" />
           <label>Empresa</label>
-          <input type="text" id="vc-org" placeholder="UNESPAR" />
+          <input type="text" id="vc-org" placeholder="SED/SC" />
           <label>Cargo</label>
           <input type="text" id="vc-title" placeholder="Professor" />
           <label>Telefone</label>
           <input type="tel" id="vc-phone" placeholder="+55 44 9 9999-9999" />
           <label>E-mail</label>
-          <input type="email" id="vc-email" placeholder="joao@unespar.edu.br" />
+          <input type="email" id="vc-email" placeholder="joao@sed.sc.gov.br" />
           <label>Site</label>
-          <input type="url" id="vc-url" placeholder="https://unespar.edu.br" />
+          <input type="url" id="vc-url" placeholder="https://www.sed.sc.gov.br" />
           <label>Endereço</label>
           <input type="text" id="vc-address" placeholder="Rua, Cidade, Estado" />
         </div>
@@ -147,8 +156,8 @@
           <div class="color-field">
             <label>Cor do QR</label>
             <div class="color-input-wrap">
-              <input type="color" id="color-fg" value="#003d72" />
-              <input type="text" class="color-hex" id="hex-fg" value="#003d72" maxlength="7" />
+              <input type="color" id="color-fg" value="#336633" />
+              <input type="text" class="color-hex" id="hex-fg" value="#336633" maxlength="7" />
             </div>
           </div>
           <div class="color-field">
@@ -167,20 +176,20 @@
           <span class="step">3</span> Logo
         </h3>
         <div class="logo-options">
-          <label class="logo-opt active" id="logo-opt-unespar">
-            <input type="radio" name="logo" value="unespar" checked />
-            <img src="assets/logo-unespar.png" alt="UNESPAR" />
-            <span>UNESPAR</span>
+          <label class="logo-opt active" id="logo-opt-cre">
+            <input type="radio" name="logo" value="cre" checked />
+            <img src="assets/logo-cre-mafra.png" alt="CRE Mafra" />
+            <span>CRE Mafra</span>
           </label>
-          <label class="logo-opt" id="logo-opt-unespar2">
-            <input type="radio" name="logo" value="unespar2" />
-            <img src="assets/logo-unespar-2.jpg" alt="UNESPAR 2" />
-            <span>UNESPAR 2</span>
+          <label class="logo-opt" id="logo-opt-sed">
+            <input type="radio" name="logo" value="sed" />
+            <img src="assets/logo-sed.png" alt="SED/SC" />
+            <span>SED/SC</span>
           </label>
-          <label class="logo-opt" id="logo-opt-unespar3">
-            <input type="radio" name="logo" value="unespar3" />
-            <img src="assets/logo-unespar-3.jpg" alt="UNESPAR 3" />
-            <span>UNESPAR 3</span>
+          <label class="logo-opt" id="logo-opt-bandeira">
+            <input type="radio" name="logo" value="bandeira" />
+            <img src="assets/bandeira-sc.png" alt="Bandeira SC" />
+            <span>Bandeira SC</span>
           </label>
           <label class="logo-opt" id="logo-opt-none">
             <input type="radio" name="logo" value="none" />
@@ -312,7 +321,7 @@
 
   <!-- ═══════════════ FOOTER ═══════════════ -->
   <footer>
-    <p>© UNESPAR — QR Codes permanentes, gerados localmente, sem expiração e sem limite de scans.</p>
+    <p>© CRE Mafra — Secretaria de Estado da Educação / SC — QR Codes permanentes, gerados localmente, sem expiração e sem limite de scans.</p>
   </footer>
 
   <script src="lib/qr-code-styling.js"></script>

@@ -9,9 +9,9 @@ const state = {
   dotStyle:   'square',
   csStyle:    'square',
   cdStyle:    'square',
-  fgColor:    '#003d72',
+  fgColor:    '#336633',
   bgColor:    '#ffffff',
-  logo:       'unespar',   // 'unespar' | 'none' | 'custom'
+  logo:       'cre',   // 'cre' | 'sed' | 'bandeira' | 'none' | 'custom'
   size:       400,
 };
 
@@ -99,7 +99,7 @@ $('quality-slider').addEventListener('input', e => {
 function buildContent() {
   switch (state.type) {
     case 'url':
-      return $('input-url').value.trim() || 'https://unespar.edu.br/';
+      return $('input-url').value.trim() || 'https://www.sed.sc.gov.br/';
 
     case 'text':
       return $('input-text').value.trim() || ' ';
@@ -169,10 +169,9 @@ function buildContent() {
 function getLogoImage() {
   if (state.logo === 'none') return undefined;
   if (state.logo === 'custom') return customLogoDataURL || undefined;
-  if (state.logo === 'unespar2') return 'assets/logo-unespar-2.jpg';
-  if (state.logo === 'unespar3') return 'assets/logo-unespar-3.jpg';
-  // unespar — use local asset
-  return 'assets/logo-unespar.png';
+  if (state.logo === 'cre') return 'assets/logo-cre-mafra.png';
+  if (state.logo === 'bandeira') return 'assets/bandeira-sc.png';
+  return 'assets/logo-sed.png';
 }
 
 // ── Generate QR Code ──────────────────────────────────────────────
@@ -231,10 +230,10 @@ $('btn-create').addEventListener('click', () => {
 // ── Downloads ─────────────────────────────────────────────────────
 $('btn-dl-png').addEventListener('click', () => {
   if (!qrInstance) return;
-  qrInstance.download({ name: 'qr-unespar', extension: 'png' });
+  qrInstance.download({ name: 'qr-cre-mafra', extension: 'png' });
 });
 
 $('btn-dl-svg').addEventListener('click', () => {
   if (!qrInstance) return;
-  qrInstance.download({ name: 'qr-unespar', extension: 'svg' });
+  qrInstance.download({ name: 'qr-cre-mafra', extension: 'svg' });
 });
